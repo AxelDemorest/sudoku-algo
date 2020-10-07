@@ -2,141 +2,44 @@ package com.company;
 
 public class Verif_Section {
 
-    static void verifSection(int Array[][], int position, int answer, int a, int b){
+    static boolean verifSection(int[][]Array){
+        boolean isValid=true;
 
-        System.out.println(position + " "+ answer);
+        int minB=0;
+        int maxB=2;
+        for (int e = 0; e<=2; e++) {
+            int minA =0;
+            int maxA = 2;
+            for (int d = 0; d < 3; d++) {
 
-        if (a % 3 == 0){
+                for (int c = 1; c < 10; c++) {
 
-            if (b%3 == 0){
-                int a2 = 0;
-                int b2 = 0;
-               for (int i = 0; i<=3; i++){
-                   if (Array[a2][b2] == answer){
-                       System.out.println("OK");
-                       a2++;
-                       b2++;
-                   }
+                    int compteur = 0;
 
-               }
+                    for (int b = minB; b < maxB + 1; b++) {
 
-            }else if (b%3 == 1){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
+                        for (int a = minA; a < maxA + 1; a++) {
+
+                            if (Array[b][a] == c) {
+                                compteur++;
+                            }
+
+                        }
+
                     }
-
-                }
-            }else if (b%3==2){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
+                    if (compteur >= 2) {
+                        isValid = false;
                     }
-
                 }
 
+                minA = minA + 3;
+                maxA = maxA + 3;
             }
-
+            minB = minB+3;
+            maxB=maxB+3;
         }
 
-
-        if (a % 3 == 1){
-
-            if (b%3 == 0){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
-                    }
-
-                }
-
-            }else if (b%3 == 1){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
-                    }
-
-                }
-
-            }else if (b%3==2){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
-                    }
-
-                }
-
-            }
-
-        }
-
-
-        if (a % 3 == 2){
-
-            if (b%3 == 0){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
-                    }
-
-                }
-
-            }else if (b%3 == 1){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
-                    }
-
-                }
-
-            }else if (b%3==2){
-                int a2 = 0;
-                int b2 = 0;
-                for (int i = 0; i<=3; i++){
-                    if (Array[a2][b2] == answer){
-                        System.out.println("OK");
-                        a2++;
-                        b2++;
-                    }
-
-                }
-
-            }else{
-                System.out.println("ERREUR");
-            }
-
-        }
-
-
-    }
+    return isValid;}
 
     public static void main(String[] args) {
 
@@ -151,9 +54,8 @@ public class Verif_Section {
                 {2, 5, 0, 6, 0, 0, 1, 0, 7},
                 {6, 0, 7, 9, 0, 5, 3, 0, 0}
         };
-        int a = 0;
-        int b = 4;
-        verifSection(boardEasy, boardEasy[a][b], 2, a, b);
+
+        System.out.println(verifSection(boardEasy));
 
     }
 

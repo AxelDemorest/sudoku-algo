@@ -3,12 +3,26 @@ package com.company;
 public class Main {
 
     static void printSudoku(int array[][]){
-        for (int i = 0;  i<9;  i++){
+        System.out.print(" ");
+        for (int b = 0; b<35; b++){
 
+            System.out.print("_");
+        }
+        System.out.println();
+        for (int i = 0;  i<9;  i++){
+            System.out.print("|");
             for(int a = 0; a <9;  a++){
-                System.out.print(array[i][a] + " ");
+                System.out.print(" "+array[i][a] + " |");
+            }
+            System.out.println(" ");
+
+
+            System.out.print(" --");
+            for (int b = 0; b<33; b++){
+                System.out.print("-");
             }
             System.out.println();
+
         }
 
     }

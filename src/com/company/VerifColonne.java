@@ -1,16 +1,16 @@
 package com.company;
 
-public class LigneValid {
+public class VerifColonne {
 
-    static boolean AllLigneIsValid(int[][] array) {
+    static boolean AllColumnIsValid(int[][] array) {
 
-        for(int ligne = 0; ligne < 9; ligne++) {
+        for(int column = 0; column < 9; column++) {
 
             for (int number = 1; number < 10; number++) {
 
                 int compteurNumber = 0;
 
-                for (int column = 0; column < 9; column++) {
+                for (int ligne = 0; ligne < 9; ligne++) {
 
                     if (array[ligne][column] == number) {
 
@@ -31,6 +31,7 @@ public class LigneValid {
         return true;
 
     }
+
 
     public static void main(String[] args) {
 
@@ -58,7 +59,7 @@ public class LigneValid {
                 {6, 0, 7, 9, 0, 5, 3, 0, 0}
         };
 
-        System.out.println(AllLigneIsValid(boardEasy2));
+        System.out.println(AllColumnIsValid(boardEasy2));
 
     }
 }

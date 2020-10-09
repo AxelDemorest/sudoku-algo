@@ -3,12 +3,22 @@ package com.company;
 public class backtracing {
     static int complexity =0;
 
+    /**
+     * Verifie les contraintes de lignes, colonne et sous section
+     * @param array Tableau contenant les valeurs de la grille de sudoku
+     * @return Renvoie true si toutes les contraintes sont validées
+     */
     static boolean isValid (int array[][]){
         if (grilleValid.VerifGrille(array)){
             return true;
         }else return false;
     }
 
+    /**
+     * Algorithme permettant de vérifier chaque combinaisons de chiffre
+     * @param Array Tableau contant les valeurs de la grille de sudoku
+     * @return
+     */
     static boolean backtracing(int [][]Array) {
         for (int a = 0; a< 9; a++) {
             for (int b = 0; b < 9; b++) {

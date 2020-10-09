@@ -1,7 +1,11 @@
 package com.company;
 
 public class VerifColonne {
-
+    /**
+     * Vérifire dans chaque colonne de la grille si il y a plusieurs fois la même valeur
+     * @param array Tableau contenant les valeurs de la grille de sudoku
+     * @return Renvoie true si les contraintes de colonne sont bonnes
+     */
     static boolean AllColumnIsValid(int[][] array) {
 
         for(int column = 0; column < 9; column++) {

@@ -1,7 +1,11 @@
 package com.company;
 
 public class Verif_Section {
-
+    /**
+     * Vérifire dans chaque sous-section de la grille si il y a plusieurs fois la même valeur
+     * @param Array Tableau contenant les valeurs de la grille de sudoku
+     * @return Renvoie true si les contraintes de sous-section sont bonnes
+     */
     static boolean verifSection(int[][]Array){
         boolean isValid=true;
 

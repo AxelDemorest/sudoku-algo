@@ -3,6 +3,10 @@ package com.company;
 import java.io.IOException;
 
 public class Main {
+    /**
+     * Affiche la grille de sudoku
+     * @param array Tableau contenant les valeurs de la grille de sudoku
+     */
 
     static void printSudoku(int array[][]){
         System.out.print(" ");

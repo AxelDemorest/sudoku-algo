@@ -1,7 +1,11 @@
 package com.company;
 
 public class grilleValid {
-
+    /**
+     * Verifie les contraintes de lignes, colonne et sous section
+     * @param array Tableau contenant les valeurs de la grille de sudoku
+     * @return Renvoie true si toutes les contraintes sont validées
+     */
     static boolean VerifGrille(int[][] array) {
 
             if(LigneValid.AllLigneIsValid(array) && VerifColonne.AllColumnIsValid(array) && Verif_Section.verifSection(array)) {

@@ -1,6 +1,11 @@
 package com.company;
 
 public class LigneValid {
+    /**
+     * Vérifire dans chaque ligne de la grille si il y a plusieurs fois la même valeur
+     * @param array Tableau contenant les valeurs de la grille de sudoku
+     * @return Renvoie true si les contraintes de lignes sont bonnes
+     */
 
     static boolean AllLigneIsValid(int[][] array) {
 

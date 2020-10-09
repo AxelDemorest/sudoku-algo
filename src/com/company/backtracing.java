@@ -1,31 +1,37 @@
 package com.company;
 
 public class backtracing {
+    static int complexity =0;
 
-    static void backtracing(int [][]Array) {
-        for (int a = 0; a< 9; a++)
-            for (int b = 0; b <8; b++) {
-                for (int c = 0; c<10; c++) {
-                    if (Array[a][b] != 0) {
-                        b++;
-                    } else {
-                        break;
-                    }
+    static boolean isValid (int array[][]){
+        if (grilleValid.VerifGrille(array)){
+            return true;
+        }else return false;
+    }
 
+    static boolean backtracing(int [][]Array) {
+        for (int a = 0; a< 9; a++) {
+            for (int b = 0; b < 9; b++) {
+                if (Array[a][b] != 0) {
+                    continue;
                 }
                 for (int i = 1; i <= 9; i++) {
-                    if (VerifColone.VerifColone(Array, i, b) && LigneValid.LigneIsValid(Array, i, a)) {
-                        Array[a][b] = i;
-                        if (Verif_Section.verifSection(Array)){
-                            break;
+                    Array[a][b] = i;
+                    complexity++;
+                    boolean isValid = isValid(Array);
+                    if (isValid) {
+                        if (backtracing(Array)){
+                           return true;
                         }
-                    }else{
-                        Array[a][b] = 0;
-                    }
+                    }Array[a][b] = 0;
                 }
+                return false;
             }
+        }
         Main.printSudoku(Array);
-    }
+        System.out.println("Complexité : "+ complexity);
+
+    return true;}
 
 
     public static void main(String[] args) {

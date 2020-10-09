@@ -79,6 +79,14 @@ public class Main {
         };
 
         printSudoku(boardEasy);
+        backtracing.backtracing(boardEasy);
+        printSudoku(boardMedium);
+        backtracing.backtracing(boardMedium);
+        printSudoku(boardHard);
+        backtracing.backtracing(boardHard);
+        printSudoku(boardGodLike);
+        backtracing.backtracing(boardGodLike);
+
     }
 
 }

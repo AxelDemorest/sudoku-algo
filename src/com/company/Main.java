@@ -84,18 +84,11 @@ public class Main {
                 {0, 0, 2, 4, 0, 0, 0, 0, 8}
         };
 
-        printSudoku(boardEasy);
-        System.out.println("-------------------------------------");
-        backtracing.backtracing(boardEasy);
-        printSudoku(boardMedium);
-        System.out.println("-------------------------------------");
-        backtracing.backtracing(boardMedium);
-        printSudoku(boardHard);
-        System.out.println("-------------------------------------");
-        backtracing.backtracing(boardHard);
-        printSudoku(boardGodLike);
-        System.out.println("-------------------------------------");
-        backtracing.backtracing(boardGodLike);
+
+
+        int[][] array = ChargeFichier.ChargeFichier("test.txt");
+        printSudoku(array);
+
 
     }
 

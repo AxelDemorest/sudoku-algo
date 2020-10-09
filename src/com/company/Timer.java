@@ -22,7 +22,7 @@ public class Timer {
                     {6, 0, 7, 9, 0, 5, 3, 0, 0}
             };
             printSudoku(boardEasy);
-            
+
              long TimerEnd = System.currentTimeMillis();
              long Timer = TimerEnd - TimerStart;
 

@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.IOException;
+
 public class Main {
 
     static void printSudoku(int array[][]){
@@ -27,7 +29,7 @@ public class Main {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         int[][] boardEasy = {
                 {4, 0, 0, 1, 0, 2, 6, 8, 0},
@@ -79,12 +81,16 @@ public class Main {
         };
 
         printSudoku(boardEasy);
+        System.out.println("-------------------------------------");
         backtracing.backtracing(boardEasy);
         printSudoku(boardMedium);
+        System.out.println("-------------------------------------");
         backtracing.backtracing(boardMedium);
         printSudoku(boardHard);
+        System.out.println("-------------------------------------");
         backtracing.backtracing(boardHard);
         printSudoku(boardGodLike);
+        System.out.println("-------------------------------------");
         backtracing.backtracing(boardGodLike);
 
     }

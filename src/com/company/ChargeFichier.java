@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class ChargeFichier {
 
-    public static void main(String[] args) throws IOException {
+    static void ChargeFichier(String path) throws IOException {
 
-        BufferedReader in = new BufferedReader(new FileReader("test.txt"));
+        BufferedReader in = new BufferedReader(new FileReader(path));
 
         String line;
 
@@ -30,6 +30,10 @@ public class ChargeFichier {
         }
 
         in.close();
+
+    }
+
+    public static void main(String[] args) {
 
 
     }

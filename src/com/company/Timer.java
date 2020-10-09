@@ -22,17 +22,7 @@ public class Timer {
                     {6, 0, 7, 9, 0, 5, 3, 0, 0}
             };
             printSudoku(boardEasy);
-
-
-             boolean ligneverifier= LigneValid.AllLigneIsValid(boardEasy);
-             boolean colonneverifier=VerifColonne.AllColumnIsValid(boardEasy);
-             boolean sectionverifier=Verif_Section.verifSection(boardEasy);
-             System.out.println(ligneverifier);
-             System.out.println(colonneverifier);
-             System.out.println(sectionverifier);
-
-             grilleValid.VerifGrille(boardEasy);
-
+            
              long TimerEnd = System.currentTimeMillis();
              long Timer = TimerEnd - TimerStart;
 
